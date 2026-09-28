@@ -54,6 +54,7 @@
   --border-rad: 0.75rem;
 
   --full-width: 75rem;
+  /* calc(max(100% - 75rem, 2rem) / 2) */
   --full-width-padding-inline: calc(max(100% - var(--full-width), 2rem) / 2);
 
   --animation-duration-fast: 0.2s;

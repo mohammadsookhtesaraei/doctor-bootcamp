@@ -1,8 +1,9 @@
+import GlobalSearchBox from "@/components/GlobalSearchBox/GlobalSearchBox";
 
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <GlobalSearchBox/>
   )
 }
 export default HomePage;

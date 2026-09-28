@@ -26,8 +26,8 @@ export default function RootLayout({
     <html lang="fa" dir="rtl" className={`${vazir.variable}`}>
       <body>
         <Header/>
-        {children}
-          <p className="tagline">
+        <main className="bg-surface-400">{children}</main>
+        <p className="tagline">
           نوبت دهی پزشکی، سامانه نوبت دهی اینترنتی بیمارستان و پزشکان
         </p>
         <Footer/>
