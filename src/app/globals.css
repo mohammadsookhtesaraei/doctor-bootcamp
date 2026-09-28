@@ -20,8 +20,8 @@
   --surface-400: var(--gray-97);
   --surface-700: var(--gray-99);
 
-  --text-400: var(--gray-10);
-  --text-700: var(--gray-40);
+  --text-4: var(--gray-10);
+  --text-7: var(--gray-40);
 
   --primary: hsl(200deg 90% 46%);
   --primary-fade: hsl(200deg 90% 96%);
@@ -116,8 +116,8 @@
   --color-surface-700: var(--surface-700);
 
   /* Text */
-  --color-text-400: var(--text-400);
-  --color-text-700: var(--text-700);
+  --color-four: var(--text-4);
+  --color-seven: var(--text-7);
 
   /* Primary */
   --color-primary: var(--primary);
