@@ -1,7 +1,173 @@
 @import "tailwindcss";
 
+@import "../tailwind/typography.css";
+
+:root {
+  --gray-99: hsl(200deg 10% 99%);
+  --gray-97: hsl(200deg 10% 97%);
+  --gray-93: hsl(200deg 10% 93%);
+  --gray-90: hsl(200deg 10% 90%);
+  --gray-80: hsl(200deg 10% 80%);
+  --gray-70: hsl(200deg 10% 70%);
+  --gray-40: hsl(200deg 10% 40%);
+  --gray-30: hsl(200deg 10% 30%);
+  --gray-20: hsl(200deg 10% 20%);
+  --gray-16: hsl(200deg 10% 16%);
+  --gray-12: hsl(200deg 10% 12%);
+  --gray-10: hsl(200deg 10% 10%);
+
+  --surface-300: var(--gray-93);
+  --surface-400: var(--gray-97);
+  --surface-700: var(--gray-99);
+
+  --text-400: var(--gray-10);
+  --text-700: var(--gray-40);
+
+  --primary: hsl(200deg 90% 46%);
+  --primary-fade: hsl(200deg 90% 96%);
+  --primary-lighter: hsl(200deg 90% 50%);
+  --primary-darker: hsl(200deg 90% 42%);
+  --primary-opposite: var(--gray-99);
+
+  --danger: hsl(10deg 80% 48%);
+  --danger-fade: hsl(10deg 80% 96%);
+  --danger-lighter: hsl(10deg 80% 52%);
+  --danger-darker: hsl(10deg 80% 44%);
+  --danger-opposite: var(--gray-99);
+
+  --online-indicator: hsl(160deg 90% 65%);
+  --online-indicator-fade: hsl(160deg 90% 85%);
+
+  --star: hsl(50deg 100% 50%);
+
+  --border: var(--gray-80);
+
+  --shad-300: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shad-400: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shad-500: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shad-700:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shad-800:
+    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shad-900: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  --border-rad: 0.75rem;
+
+  --full-width: 75rem;
+  --full-width-padding-inline: calc(max(100% - var(--full-width), 2rem) / 2);
+
+  --animation-duration-fast: 0.2s;
+  --animation-duration-normal: 0.5s;
+  --animation-duration-slow: 1s;
+}
+
 @layer base {
   html {
     font-family: var(--vazir-font), sans-serif;
+    color-scheme: light;
+    accent-color: var(--primary);
+    caret-color: var(--primary);
+    font-feature-settings: "ss01";
   }
+
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    min-block-size: 100vh;
+    min-block-size: 100dvh;
+    font-size: var(--fz-400);
+
+    > * {
+      padding-inline: var(--full-width-padding-inline);
+    }
+
+    .tagline {
+      background-color: var(--color-surface-300);
+
+      padding-block: 1rem;
+
+      text-align: center;
+    }
+  }
+}
+
+@theme inline {
+  /* حذف رنگ‌ها و سایه‌های پیش‌فرض Tailwind */
+  --color-*: initial;
+  --shadow-*: initial;
+
+  /* Gray */
+  --color-gray-99: var(--gray-99);
+  --color-gray-97: var(--gray-97);
+  --color-gray-93: var(--gray-93);
+  --color-gray-90: var(--gray-90);
+  --color-gray-80: var(--gray-80);
+  --color-gray-70: var(--gray-70);
+  --color-gray-40: var(--gray-40);
+  --color-gray-30: var(--gray-30);
+  --color-gray-20: var(--gray-20);
+  --color-gray-16: var(--gray-16);
+  --color-gray-12: var(--gray-12);
+  --color-gray-10: var(--gray-10);
+
+  /* Surface */
+  --color-surface-300: var(--surface-300);
+  --color-surface-400: var(--surface-400);
+  --color-surface-700: var(--surface-700);
+
+  /* Text */
+  --color-text-400: var(--text-400);
+  --color-text-700: var(--text-700);
+
+  /* Primary */
+  --color-primary: var(--primary);
+  --color-primary-fade: var(--primary-fade);
+  --color-primary-lighter: var(--primary-lighter);
+  --color-primary-darker: var(--primary-darker);
+  --color-primary-opposite: var(--primary-opposite);
+
+  /* Danger */
+  --color-danger: var(--danger);
+  --color-danger-fade: var(--danger-fade);
+  --color-danger-lighter: var(--danger-lighter);
+  --color-danger-darker: var(--danger-darker);
+  --color-danger-opposite: var(--danger-opposite);
+
+  /* Misc */
+  --color-online-indicator: var(--online-indicator);
+  --color-online-indicator-fade: var(--online-indicator-fade);
+  --color-star: var(--star);
+  --color-border: var(--border);
+
+  /* Shadows */
+  --shadow-300: var(--shad-300);
+  --shadow-400: var(--shad-400);
+  --shadow-500: var(--shad-500);
+  --shadow-700: var(--shad-700);
+  --shadow-800: var(--shad-800);
+  --shadow-900: var(--shad-900);
+
+  /* Radius و Container */
+  --radius-base: var(--border-rad);
+  --container-page: var(--full-width);
+
+  --text-100: var(--fz-100);
+  --text-200: var(--fz-200);
+  --text-300: var(--fz-300);
+  --text-400: var(--fz-400);
+  --text-500: var(--fz-500);
+  --text-600: var(--fz-600);
+  --text-700: var(--fz-700);
+  --text-800: var(--fz-800);
+  --text-900: var(--fz-900);
+}
+
+@utility duration-fast {
+  transition-duration: var(--animation-duration-fast);
+}
+@utility duration-normal {
+  transition-duration: var(--animation-duration-normal);
+}
+@utility duration-slow {
+  transition-duration: var(--animation-duration-slow);
 }
