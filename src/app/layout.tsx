@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl" className={`${vazir.variable}`}>
+    <html lang="fa" dir="rtl" className={`dark ${vazir.variable}`}>
       <body>
         <Header/>
         <main className="bg-surface-400">{children}</main>

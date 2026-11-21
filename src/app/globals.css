@@ -2,6 +2,8 @@
 
 @import "../tailwind/typography.css";
 
+@custom-variant dark (&:where(.dark,.dark *));
+
 :root {
   --gray-99: hsl(200deg 10% 99%);
   --gray-97: hsl(200deg 10% 97%);
